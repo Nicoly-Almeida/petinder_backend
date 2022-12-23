@@ -2,6 +2,8 @@ package br.ifpb.pweb.petinder.service;
 
 import br.ifpb.pweb.petinder.model.Pet;
 import br.ifpb.pweb.petinder.repositories.PetRepository;
+
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,7 +23,8 @@ public class PetService {
 	public List<Pet> getPets() {
 	       return this.petRepository.findAll();
 	   }
-
+	
+	
 	   public Pet getPetPorId(Long idPet) {
 	       return this.petRepository.findById(idPet).orElse(null);
 	   }

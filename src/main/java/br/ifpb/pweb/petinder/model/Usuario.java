@@ -11,6 +11,7 @@ public class Usuario {
    @GeneratedValue(strategy = GenerationType.AUTO)
    private Long id;
    private String nome;
+   private String telefone;
    private String email;
    private String senha;
    private String repetir_senha;
@@ -25,6 +26,14 @@ public class Usuario {
 
    public void setNome(String nome) {
        this.nome = nome;
+   }
+   
+   public String getTelefone() {
+       return telefone;
+   }
+
+   public void setTelefone(String telefone) {
+       this.telefone = telefone;
    }
 
    public String getEmail() {

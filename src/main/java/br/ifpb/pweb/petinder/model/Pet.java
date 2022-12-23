@@ -13,6 +13,7 @@ public class Pet {
    private Integer idade;
    private String sexo;
    private String raca;
+   
 
    public Long getId() {
        return id;
