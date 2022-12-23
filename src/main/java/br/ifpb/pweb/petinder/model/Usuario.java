@@ -1,6 +1,15 @@
 package br.ifpb.pweb.petinder.model;
 
-import jakarta.persistence.*;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.Table;
 
 
 @Entity
@@ -11,7 +20,6 @@ public class Usuario {
    @GeneratedValue(strategy = GenerationType.AUTO)
    private Long id;
    private String nome;
-   private String telefone;
    private String email;
    private String senha;
    private String repetir_senha;
@@ -26,14 +34,6 @@ public class Usuario {
 
    public void setNome(String nome) {
        this.nome = nome;
-   }
-   
-   public String getTelefone() {
-       return telefone;
-   }
-
-   public void setTelefone(String telefone) {
-       this.telefone = telefone;
    }
 
    public String getEmail() {

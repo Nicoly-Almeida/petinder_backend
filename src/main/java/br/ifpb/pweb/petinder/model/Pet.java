@@ -12,8 +12,10 @@ public class Pet {
    private String nome;
    private Integer idade;
    private String sexo;
+   private String foto;
    private String raca;
-   
+   @ManyToOne()
+   private Usuario usuario;
 
    public Long getId() {
        return id;
@@ -49,5 +51,13 @@ public class Pet {
 
    public void setIdade(Integer idade) {
        this.idade = idade;
+   }
+   
+   public String getFoto() {
+       return foto;
+   }
+
+   public void setFoto(String foto) {
+       this.foto = foto;
    }
 }
